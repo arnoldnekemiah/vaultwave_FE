@@ -11,12 +11,16 @@ const WaitlistSection = () => {
     walletAddress,
     setWalletAddress,
     isSubmitted,
+    isLoading,
+    error,
     waitlistPosition,
     referralLink,
+    totalReferrals,
     copied,
     handleSubmit,
     copyReferralLink,
-    shareToTwitter
+    shareToTwitter,
+    setError
   } = useWaitlist();
 
   return (
@@ -37,6 +41,16 @@ const WaitlistSection = () => {
                     
                     <Row className="justify-content-center">
                       <Col md={8}>
+                        {error && (
+                          <div className="alert alert-danger mb-4" role="alert">
+                            {error}
+                            <button 
+                              type="button" 
+                              className="btn-close float-end" 
+                              onClick={() => setError(null)}
+                            ></button>
+                          </div>
+                        )}
                         <Form>
                           <Form.Group className="mb-4">
                             <Form.Control
@@ -46,23 +60,33 @@ const WaitlistSection = () => {
                               onChange={(e) => setEmail(e.target.value)}
                               className="glass-effect border-0 text-white p-3 fs-5"
                               style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
+                              disabled={isLoading}
                             />
                           </Form.Group>
                           <Form.Group className="mb-4">
                             <Form.Control
                               type="text"
-                              placeholder="EVM Wallet Address"
+                              placeholder="EVM Wallet Address (0x...)"
                               value={walletAddress}
                               onChange={(e) => setWalletAddress(e.target.value)}
                               className="glass-effect border-0 text-white p-3 fs-5"
                               style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
+                              disabled={isLoading}
                             />
                           </Form.Group>
                           <Button
                             onClick={handleSubmit}
                             className="btn-vaultwave w-100 py-3 fs-5 hover-scale hover-glow"
+                            disabled={isLoading}
                           >
-                            Join Waitlist
+                            {isLoading ? (
+                              <>
+                                <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                Joining Waitlist...
+                              </>
+                            ) : (
+                              'Join Waitlist'
+                            )}
                           </Button>
                         </Form>
                       </Col>
@@ -78,7 +102,14 @@ const WaitlistSection = () => {
                     <div className="mb-4">
                       <h3 className="display-6 fw-bold text-white mb-3">Welcome to Vaultwave!</h3>
                       <p className="text-light mb-2">You're now on the waitlist</p>
-                      <div className="display-4 fw-bold text-electric-blue">Position #{waitlistPosition.toLocaleString()}</div>
+                      <div className="display-4 fw-bold text-electric-blue">
+                        Position #{waitlistPosition ? waitlistPosition.toLocaleString() : '---'}
+                      </div>
+                      {totalReferrals > 0 && (
+                        <p className="text-success mt-2">
+                          🎉 You've referred {totalReferrals} {totalReferrals === 1 ? 'person' : 'people'}!
+                        </p>
+                      )}
                     </div>
 
                     <Card className="glass-effect border-0 mb-4">
