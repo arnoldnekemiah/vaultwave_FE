@@ -37,7 +37,7 @@ const ServiceCard = ({ service, isReversed }) => {
             <Card className="bg-danger bg-opacity-10 border-start border-danger border-4 border-0 border-start">
               <Card.Body className="py-3">
                 <strong className="text-danger">Problem:</strong>
-                <span className="text-light ms-2">{service.problem}</span>
+                <span className="text-white ms-2">{service.problem}</span>
               </Card.Body>
             </Card>
           </div>
@@ -46,7 +46,7 @@ const ServiceCard = ({ service, isReversed }) => {
             <Card className="bg-warning bg-opacity-10 border-start border-warning border-4 border-0 border-start">
               <Card.Body className="py-3">
                 <strong className="text-warning">Solution:</strong>
-                <span className="text-light ms-2">{service.solution}</span>
+                <span className="text-white ms-2">{service.solution}</span>
               </Card.Body>
             </Card>
           </div>
@@ -55,7 +55,7 @@ const ServiceCard = ({ service, isReversed }) => {
             <Card className="bg-success bg-opacity-10 border-start border-success border-4 border-0 border-start">
               <Card.Body className="py-3">
                 <strong className="text-success">Value:</strong>
-                <span className="text-light ms-2">{service.value}</span>
+                <span className="text-white ms-2">{service.value}</span>
               </Card.Body>
             </Card>
           </div>
@@ -84,7 +84,7 @@ const EcosystemSection = () => {
             <h2 className="display-3 fw-bold gradient-text mb-4">
               The Vaultwave Ecosystem
             </h2>
-            <p className="fs-4 text-light mx-auto" style={{ maxWidth: '600px' }}>
+            <p className="fs-4 text-white mx-auto" style={{ maxWidth: '600px', opacity: '0.9' }}>
               Three powerful platforms united by blockchain technology and community trust
             </p>
           </Col>

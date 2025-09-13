@@ -159,17 +159,23 @@ html {
   border-radius: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(7, 97, 226, 0.2);
 }
 
 .btn-vaultwave:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(7, 97, 226, 0.3);
+  box-shadow: 0 10px 30px rgba(7, 97, 226, 0.4);
+  color: white;
+}
+
+.btn-vaultwave:focus {
+  box-shadow: 0 0 0 0.2rem rgba(7, 97, 226, 0.5);
   color: white;
 }
 
 .btn-outline-vaultwave {
   background: transparent;
-  border: 2px solid rgba(7, 97, 226, 0.5);
+  border: 2px solid rgba(7, 97, 226, 0.7);
   color: white;
   padding: 12px 32px;
   border-radius: 12px;
@@ -178,7 +184,45 @@ html {
 }
 
 .btn-outline-vaultwave:hover {
-  background: rgba(7, 97, 226, 0.1);
+  background: rgba(7, 97, 226, 0.15);
   border-color: var(--electric-blue);
   color: white;
+  transform: translateY(-2px);
+}
+
+/* Enhanced form controls */
+.form-control:focus {
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 0 0.2rem rgba(7, 97, 226, 0.25);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Improved alert styles */
+.alert-danger {
+  background: rgba(220, 53, 69, 0.15) !important;
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  color: #ff6b6b !important;
+}
+
+/* Enhanced card styles */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Better text contrast */
+.text-muted {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Improved navigation */
+.navbar-nav .nav-link:hover {
+  color: var(--electric-blue) !important;
+  transform: translateY(-1px);
 }

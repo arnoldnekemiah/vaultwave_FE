@@ -21,7 +21,7 @@ const HeroSection = () => {
               Digital Finance
             </h1>
             
-            <p className="fs-4 text-light mb-5 mx-auto" style={{ maxWidth: '800px', lineHeight: '1.6' }}>
+            <p className="fs-4 text-white mb-5 mx-auto" style={{ maxWidth: '800px', lineHeight: '1.6', opacity: '0.9' }}>
               Money moving quickly, securely, and directly between people without unnecessary middlemen. 
               Experience the power of blockchain-backed trust and community-driven participation.
             </p>

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="position-relative py-5 border-top border-secondary" style={{ zIndex: 10 }}>
       <Container>
         <Row>
-          <Col className="text-center text-muted">
+          <Col className="text-center">
             <div className="d-flex align-items-center justify-content-center mb-3">
               <div className="gradient-bg rounded me-3 d-flex align-items-center justify-content-center" 
                    style={{ width: '32px', height: '32px' }}>
@@ -14,7 +14,7 @@ const Footer = () => {
               </div>
               <span className="gradient-text fs-4 fw-bold">vaultwave</span>
             </div>
-            <p className="mb-0">&copy; 2025 Vaultwave. All rights reserved.</p>
+            <p className="mb-0 text-white" style={{ opacity: '0.8' }}>&copy; 2025 Vaultwave. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

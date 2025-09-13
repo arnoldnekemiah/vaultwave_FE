@@ -35,7 +35,7 @@ const WaitlistSection = () => {
                     <h2 className="display-4 fw-bold gradient-text mb-4">
                       Join the Waitlist
                     </h2>
-                    <p className="fs-5 text-light mb-5 mx-auto" style={{ maxWidth: '500px' }}>
+                    <p className="fs-5 text-white mb-5 mx-auto" style={{ maxWidth: '500px', opacity: '0.9' }}>
                       Be among the first to experience the future of decentralized finance. Early access comes with exclusive benefits.
                     </p>
                     
@@ -59,7 +59,7 @@ const WaitlistSection = () => {
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
                               className="glass-effect border-0 text-white p-3 fs-5"
-                              style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
+                              style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
                               disabled={isLoading}
                             />
                           </Form.Group>
@@ -70,7 +70,7 @@ const WaitlistSection = () => {
                               value={walletAddress}
                               onChange={(e) => setWalletAddress(e.target.value)}
                               className="glass-effect border-0 text-white p-3 fs-5"
-                              style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
+                              style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
                               disabled={isLoading}
                             />
                           </Form.Group>
@@ -101,7 +101,7 @@ const WaitlistSection = () => {
                     
                     <div className="mb-4">
                       <h3 className="display-6 fw-bold text-white mb-3">Welcome to Vaultwave!</h3>
-                      <p className="text-light mb-2">You're now on the waitlist</p>
+                      <p className="text-white mb-2" style={{ opacity: '0.9' }}>You're now on the waitlist</p>
                       <div className="display-4 fw-bold text-electric-blue">
                         Position #{waitlistPosition ? waitlistPosition.toLocaleString() : '---'}
                       </div>
@@ -120,7 +120,7 @@ const WaitlistSection = () => {
                             value={referralLink}
                             readOnly
                             className="glass-effect border-0 text-electric-blue"
-                            style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
+                            style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
                           />
                           <Button
                             onClick={copyReferralLink}

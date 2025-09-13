@@ -28,7 +28,7 @@ const PartnersSection = () => {
                       flexShrink: 0
                     }}
                   >
-                    <span className="text-light fw-semibold">{partner}</span>
+                    <span className="text-white fw-semibold">{partner}</span>
                   </div>
                 ))}
               </div>
