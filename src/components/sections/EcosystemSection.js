@@ -31,7 +31,8 @@ const ServiceCard = ({ service, isReversed }) => {
           <div className={`glass-effect p-4 rounded mb-4 d-inline-block`}>
             <IconComponent iconName={service.icon} size={32} />
           </div>
-          <h3 className="display-5 fw-bold text-white mb-4">{service.title}</h3>
+          <h3 className="display-5 fw-bold text-white mb-2">{service.title}</h3>
+          <p className="fs-5 text-electric-blue fw-semibold mb-4">{service.subtitle}</p>
           
           <div className="mb-3">
             <Card className="bg-danger bg-opacity-10 border-start border-danger border-4 border-0 border-start">
@@ -62,12 +63,14 @@ const ServiceCard = ({ service, isReversed }) => {
         </Col>
         
         <Col lg={6}>
-          <div className={`glass-effect rounded-3 d-flex align-items-center justify-content-center ${getIconColor(service.id)}`} 
+          <div className="glass-effect rounded-3 overflow-hidden" 
                style={{ height: '320px' }}>
-            <div className="text-center">
-              <IconComponent iconName={service.icon} size={64} />
-              <p className="fw-semibold mt-3 mb-0">{service.title}</p>
-            </div>
+            <img 
+              src={service.image} 
+              alt={service.title}
+              className="w-100 h-100"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
         </Col>
       </Row>

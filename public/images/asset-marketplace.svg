@@ -1,0 +1,55 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B2CBF;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#3C096C;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="iconGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9D4EDD" />
+      <stop offset="100%" style="stop-color:#C77DFF" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient2)" rx="20"/>
+  
+  <!-- Central marketplace platform -->
+  <rect x="150" y="200" width="100" height="60" fill="url(#iconGradient2)" rx="8"/>
+  
+  <!-- Shopping cart -->
+  <rect x="180" y="120" width="40" height="30" fill="none" stroke="url(#iconGradient2)" stroke-width="3" rx="4"/>
+  <circle cx="185" cy="170" r="4" fill="url(#iconGradient2)"/>
+  <circle cx="215" cy="170" r="4" fill="url(#iconGradient2)"/>
+  <path d="M 175 120 L 180 100 L 190 100" stroke="url(#iconGradient2)" stroke-width="3" fill="none"/>
+  
+  <!-- Assets around the marketplace -->
+  <!-- House -->
+  <path d="M 80 140 L 100 120 L 120 140 L 120 170 L 80 170 Z" fill="url(#iconGradient2)" opacity="0.8"/>
+  <rect x="95" y="150" width="10" height="20" fill="white"/>
+  
+  <!-- Car -->
+  <rect x="280" y="150" width="40" height="15" fill="url(#iconGradient2)" opacity="0.8" rx="7"/>
+  <circle cx="290" cy="170" r="6" fill="white"/>
+  <circle cx="310" cy="170" r="6" fill="white"/>
+  
+  <!-- Diamond -->
+  <path d="M 100 80 L 110 70 L 120 80 L 110 90 Z" fill="url(#iconGradient2)" opacity="0.8"/>
+  
+  <!-- Stock chart -->
+  <path d="M 280 80 L 290 70 L 300 85 L 310 75 L 320 90" stroke="url(#iconGradient2)" stroke-width="3" fill="none" opacity="0.8"/>
+  
+  <!-- Connection lines to marketplace -->
+  <path d="M 120 155 Q 135 175 150 190" stroke="url(#iconGradient2)" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,5"/>
+  <path d="M 280 165 Q 265 175 250 190" stroke="url(#iconGradient2)" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,5"/>
+  <path d="M 110 90 Q 130 120 150 180" stroke="url(#iconGradient2)" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,5"/>
+  <path d="M 300 90 Q 280 120 250 180" stroke="url(#iconGradient2)" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,5"/>
+  
+  <!-- Marketplace text -->
+  <text x="200" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MARKET</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="60" cy="60" r="3" fill="#C77DFF" opacity="0.6"/>
+  <circle cx="340" cy="60" r="3" fill="#C77DFF" opacity="0.6"/>
+  <circle cx="50" cy="240" r="2" fill="#9D4EDD" opacity="0.4"/>
+  <circle cx="350" cy="240" r="2" fill="#9D4EDD" opacity="0.4"/>
+</svg>
