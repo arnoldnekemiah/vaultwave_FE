@@ -11,6 +11,9 @@ const PartnersSection = () => {
             <h2 className="display-4 fw-bold gradient-text mb-4">
               Trusted by Industry Leaders
             </h2>
+            <p className="fs-5 text-white mx-auto" style={{ maxWidth: '600px', opacity: '0.9' }}>
+              Join the ecosystem alongside established DeFi protocols and blockchain innovators
+            </p>
           </Col>
         </Row>
         
@@ -23,9 +26,10 @@ const PartnersSection = () => {
                     key={index} 
                     className="glass-effect rounded d-flex align-items-center justify-content-center hover-scale"
                     style={{ 
-                      minWidth: '192px', 
+                      minWidth: '200px', 
                       height: '80px',
-                      flexShrink: 0
+                      flexShrink: 0,
+                      margin: '0 8px'
                     }}
                   >
                     <span className="text-white fw-semibold">{partner}</span>

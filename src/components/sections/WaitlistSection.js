@@ -35,12 +35,12 @@ const WaitlistSection = () => {
                     <h2 className="display-4 fw-bold gradient-text mb-4">
                       Join the Waitlist
                     </h2>
-                    <p className="fs-5 text-white mb-5 mx-auto" style={{ maxWidth: '500px', opacity: '0.9' }}>
-                      Be among the first to experience the future of decentralized finance. Early access comes with exclusive benefits.
+                    <p className="fs-5 text-white mb-5 mx-auto" style={{ maxWidth: '600px', opacity: '0.9', lineHeight: '1.6' }}>
+                      Be among the first to experience the future of decentralized finance. Early access comes with exclusive benefits and priority platform access.
                     </p>
                     
                     <Row className="justify-content-center">
-                      <Col md={8}>
+                      <Col md={10} lg={8}>
                         {error && (
                           <div className="alert alert-danger mb-4" role="alert">
                             {error}
@@ -52,42 +52,53 @@ const WaitlistSection = () => {
                           </div>
                         )}
                         <Form>
-                          <Form.Group className="mb-4">
-                            <Form.Control
-                              type="email"
-                              placeholder="Email Address"
-                              value={email}
-                              onChange={(e) => setEmail(e.target.value)}
-                              className="glass-effect border-0 text-white p-3 fs-5"
-                              style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
-                              disabled={isLoading}
-                            />
-                          </Form.Group>
-                          <Form.Group className="mb-4">
-                            <Form.Control
-                              type="text"
-                              placeholder="EVM Wallet Address (0x...)"
-                              value={walletAddress}
-                              onChange={(e) => setWalletAddress(e.target.value)}
-                              className="glass-effect border-0 text-white p-3 fs-5"
-                              style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
-                              disabled={isLoading}
-                            />
-                          </Form.Group>
-                          <Button
-                            onClick={handleSubmit}
-                            className="btn-vaultwave w-100 py-3 fs-5 hover-scale hover-glow"
-                            disabled={isLoading}
-                          >
+                          <Row className="g-3">
+                            <Col md={6}>
+                              <Form.Group>
+                                <Form.Control
+                                  type="email"
+                                  placeholder="Email Address"
+                                  value={email}
+                                  onChange={(e) => setEmail(e.target.value)}
+                                  className="glass-effect border-0 text-white p-3 fs-5"
+                                  style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px' }}
+                                  disabled={isLoading}
+                                />
+                              </Form.Group>
+                            </Col>
+                            <Col md={6}>
+                              <Form.Group>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="EVM Wallet Address (0x...)"
+                                  value={walletAddress}
+                                  onChange={(e) => setWalletAddress(e.target.value)}
+                                  className="glass-effect border-0 text-white p-3 fs-5"
+                                  style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px' }}
+                                  disabled={isLoading}
+                                />
+                              </Form.Group>
+                            </Col>
+                          </Row>
+                          <Row className="mt-4">
+                            <Col>
+                              <Button
+                                onClick={handleSubmit}
+                                className="btn-vaultwave w-100 py-3 fs-5 hover-scale hover-glow"
+                                disabled={isLoading}
+                                style={{ borderRadius: '12px' }}
+                              >
                             {isLoading ? (
                               <>
                                 <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
                                 Joining Waitlist...
                               </>
                             ) : (
-                              'Join Waitlist'
+                              <span>Join Waitlist</span>
                             )}
-                          </Button>
+                              </Button>
+                            </Col>
+                          </Row>
                         </Form>
                       </Col>
                     </Row>
@@ -116,12 +127,12 @@ const WaitlistSection = () => {
                       <Card.Body>
                         <h4 className="fs-5 fw-semibold text-white mb-3">Your Referral Link</h4>
                         <InputGroup>
-                          <Form.Control
-                            value={referralLink}
-                            readOnly
-                            className="glass-effect border-0 text-electric-blue"
-                            style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
-                          />
+                            <Form.Control
+                              value={referralLink}
+                              readOnly
+                              className="glass-effect border-0 text-electric-blue"
+                              style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px' }}
+                            />
                           <Button
                             onClick={copyReferralLink}
                             className="btn-vaultwave"

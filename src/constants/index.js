@@ -19,7 +19,6 @@ export const ECOSYSTEM_SERVICES = [
     id: 'lending',
     title: 'Peer-to-Peer Lending',
     subtitle: 'Uber for loans',
-    icon: 'Users',
     image: '/images/p2p-lending.svg',
     gradient: 'from-blue-600/20 to-blue-800/20',
     borderColor: 'border-blue-500/30',
@@ -33,7 +32,6 @@ export const ECOSYSTEM_SERVICES = [
     id: 'marketplace',
     title: 'Asset Marketplace',
     subtitle: 'eBay for assets',
-    icon: 'TrendingUp',
     image: '/images/asset-marketplace.svg',
     gradient: 'from-purple-600/20 to-purple-800/20',
     borderColor: 'border-purple-500/30',
@@ -47,7 +45,6 @@ export const ECOSYSTEM_SERVICES = [
     id: 'swaps',
     title: 'Instant Swaps',
     subtitle: 'Robinhood for swaps',
-    icon: 'Zap',
     image: '/images/instant-swaps.svg',
     gradient: 'from-green-600/20 to-green-800/20',
     borderColor: 'border-green-500/30',
@@ -61,7 +58,6 @@ export const ECOSYSTEM_SERVICES = [
 
 // Social media links
 export const SOCIAL_LINKS = {
-  TWITTER: 'https://twitter.com/vaultwave',
-  TELEGRAM: 'https://t.me/vaultwave',
-  LINKEDIN: 'https://linkedin.com/company/vaultwave'
+  TWITTER: 'https://x.com/vaultwavexyz?t=qe3URgEMkak6lYOqJeCUTg&s=08',
+  LINKEDIN: 'https://www.linkedin.com/company/vaultwave-co/about/'
 };

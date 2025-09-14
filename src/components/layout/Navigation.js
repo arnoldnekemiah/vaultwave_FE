@@ -6,10 +6,12 @@ const Navigation = () => {
     <Navbar expand="lg" className="position-relative" style={{ zIndex: 10 }}>
       <Container>
         <Navbar.Brand href="#home" className="d-flex align-items-center">
-          <div className="gradient-bg rounded me-3 d-flex align-items-center justify-content-center" 
-               style={{ width: '40px', height: '40px' }}>
-            <span className="text-white fw-bold fs-5">V</span>
-          </div>
+          <img 
+            src="/images/vaultwave_logo.png" 
+            alt="Vaultwave Logo" 
+            style={{ width: '40px', height: '40px' }}
+            className="me-3"
+          />
           <span className="gradient-text fs-3 fw-bold">vaultwave</span>
         </Navbar.Brand>
         

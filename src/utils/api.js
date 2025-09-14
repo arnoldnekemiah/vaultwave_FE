@@ -38,7 +38,7 @@ class ApiService {
     });
   }
 
-  // Get user details
+  // Get user details --- condered this for an admin interface but it is not among the requirements.
   async getUser(userId) {
     return this.request(`/api/v1/users/${userId}`);
   }

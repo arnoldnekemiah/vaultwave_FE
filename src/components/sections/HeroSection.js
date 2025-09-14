@@ -26,17 +26,20 @@ const HeroSection = () => {
               Experience the power of blockchain-backed trust and community-driven participation.
             </p>
             
-            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
               <Button 
                 href="#waitlist" 
-                className="btn-vaultwave hover-scale hover-glow px-4 py-3 fs-5"
+                className="btn-vaultwave hover-scale hover-glow px-5 py-3 fs-5"
+                style={{ minWidth: '200px' }}
               >
                 Join the Revolution
                 <ChevronRight className="ms-2" size={20} />
               </Button>
               <Button 
+                href="#ecosystem"
                 variant="outline-light" 
-                className="btn-outline-vaultwave px-4 py-3 fs-5"
+                className="btn-outline-vaultwave px-5 py-3 fs-5"
+                style={{ minWidth: '200px' }}
               >
                 Learn More
               </Button>

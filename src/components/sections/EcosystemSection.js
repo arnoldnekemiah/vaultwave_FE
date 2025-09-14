@@ -1,36 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Users, TrendingUp, Zap } from 'lucide-react';
 import { ECOSYSTEM_SERVICES } from '../../constants';
 
-const IconComponent = ({ iconName, size = 32 }) => {
-  const icons = {
-    Users: Users,
-    TrendingUp: TrendingUp,
-    Zap: Zap
-  };
-  
-  const Icon = icons[iconName];
-  return Icon ? <Icon size={size} /> : null;
-};
-
 const ServiceCard = ({ service, isReversed }) => {
-  const getIconColor = (serviceId) => {
-    switch(serviceId) {
-      case 'lending': return 'text-primary';
-      case 'marketplace': return 'text-info';
-      case 'swaps': return 'text-success';
-      default: return 'text-primary';
-    }
-  };
 
   return (
     <Container className="mb-5">
-      <Row className={`align-items-center ${isReversed ? 'flex-row-reverse' : ''}`}>
-        <Col lg={6} className="mb-4 mb-lg-0">
-          <div className={`glass-effect p-4 rounded mb-4 d-inline-block`}>
-            <IconComponent iconName={service.icon} size={32} />
-          </div>
+      <Row className={`align-items-center ${isReversed ? 'flex-row-reverse' : ''}`} style={{ minHeight: '400px' }}>
+        <Col lg={6} className="mb-4 mb-lg-0 d-flex flex-column justify-content-center">
           <h3 className="display-5 fw-bold text-white mb-2">{service.title}</h3>
           <p className="fs-5 text-electric-blue fw-semibold mb-4">{service.subtitle}</p>
           
@@ -62,9 +39,9 @@ const ServiceCard = ({ service, isReversed }) => {
           </div>
         </Col>
         
-        <Col lg={6}>
+        <Col lg={6} className="d-flex align-items-center justify-content-center">
           <div className="glass-effect rounded-3 overflow-hidden" 
-               style={{ height: '320px' }}>
+               style={{ height: '320px', width: '100%', maxWidth: '400px' }}>
             <img 
               src={service.image} 
               alt={service.title}
@@ -97,7 +74,7 @@ const EcosystemSection = () => {
           <ServiceCard 
             key={service.id} 
             service={service} 
-            isReversed={index === 1} // Middle service (marketplace) will be reversed
+            isReversed={index === 1}
           />
         ))}
       </Container>
